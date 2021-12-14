@@ -1,0 +1,22 @@
+<div class="container col-sm-6">
+
+  <h1 class="title">All Restaurants</h1>
+
+  <div class="all-cards">
+    <% @restaurants.each do |restaurant| %>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"> <%= restaurant.name%> </h5>
+        <h6 class="card-subtitle mb-2 text-muted"><%=  restaurant.category%></h6>
+        <p class="card-text">
+          <li>Phone : <%=  restaurant.phone_number%></li>
+          <li>Category : <%=  restaurant.category%></li>
+        </p>
+        <a class="card-link"> <%= link_to "Check It", restaurant_path(restaurant) %></a>
+        <a href="#" class="card-link">Leave a Review</a>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+</div>
